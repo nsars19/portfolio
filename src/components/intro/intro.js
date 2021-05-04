@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "../../colors";
 import { useInView } from "react-intersection-observer";
+import { scroller } from "react-scroll";
 
 const StyledIntro = styled.section`
   height: 100vh;
@@ -131,9 +132,15 @@ function Intro() {
     delay: 500,
   });
 
-  const [li1Ref, l1View] = useInView();
-  const [li2Ref, l2View] = useInView();
-  const [li3Ref, l3View] = useInView();
+  const liOpts = { triggerOnce: true };
+  const [li1Ref, l1View] = useInView(liOpts);
+  const [li2Ref, l2View] = useInView(liOpts);
+  const [li3Ref, l3View] = useInView(liOpts);
+
+  const scrollOptions = { smooth: "easeOutCubic" };
+  const scrollToProjects = () => scroller.scrollTo("projects", scrollOptions);
+  const scrollToContact = () => scroller.scrollTo("contact", scrollOptions);
+  const scrollToAbout = () => scroller.scrollTo("about", scrollOptions);
 
   return (
     <StyledIntro
@@ -152,13 +159,13 @@ function Intro() {
       </div>
       <ul ref={ulRef}>
         <li ref={li1Ref}>
-          <button>Projects</button>
+          <button onClick={scrollToProjects}>Projects</button>
         </li>
         <li ref={li2Ref}>
-          <button>Contact</button>
+          <button onClick={scrollToContact}>Contact</button>
         </li>
         <li ref={li3Ref}>
-          <button>About</button>
+          <button onClick={scrollToAbout}>About</button>
         </li>
       </ul>
     </StyledIntro>
