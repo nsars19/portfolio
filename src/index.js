@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Open Sans', sans-serif;
+    color: ${colors.text};
     background: ${colors.background};
   }
 `;
