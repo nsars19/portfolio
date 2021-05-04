@@ -17,6 +17,11 @@ const StyledIntro = styled.section`
       font-size: 5rem;
       opacity: ${({ inViewH1 }) => (inViewH1 ? 100 : 0)};
       margin-top: ${({ inViewH1 }) => (inViewH1 ? 0 : 20)}px;
+
+      .dot {
+        display: inline;
+        color: ${colors.accent};
+      }
     }
 
     h2 {
@@ -152,7 +157,10 @@ function Intro() {
       l3={l3View}
     >
       <div className="intro-txt">
-        <h1 ref={refH1}>Hello.</h1>
+        <h1 ref={refH1}>
+          Hello
+          <div className="dot">.</div>
+        </h1>
         <h2 ref={refH2}>
           My name is Nick. I am a full-stack, self-taught web developer.
         </h2>
