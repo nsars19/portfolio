@@ -7,7 +7,9 @@ import { Element } from "react-scroll";
 function App() {
   return (
     <>
-      <Intro />
+      <Element name="intro">
+        <Intro />
+      </Element>
       <Element name="projects">
         <Projects />
       </Element>
