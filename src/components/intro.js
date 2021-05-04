@@ -19,6 +19,7 @@ const StyledIntro = styled.section`
     }
 
     h2 {
+      font-size: 1.2rem;
       padding-left: 5px;
       margin-top: 20px;
       max-width: 360px;
@@ -28,33 +29,63 @@ const StyledIntro = styled.section`
 
     h1,
     h2 {
-      transition: margin-top 400ms ease;
       transition: opacity 400ms ease, margin-top 400ms ease;
     }
   }
 
   ul {
-    margin-top: 120px;
-    margin-bottom: 20px;
-    margin-left: 80px;
-    padding-right: 45px;
-    // max-width: 50%;
-    display: flex;
-    justify-content: flex-start;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 75px;
+    opacity: ${({ ulInView }) => (ulInView ? 100 : 0)};
+    transition: opacity 1000ms ease 400ms;
 
     li {
+      font-size: 2.2rem;
       list-style: none;
-      font-size: 1.3rem;
-      padding: 6px;
       border: 2px solid transparent;
-      margin-right: 30px;
+      border-radius: 8px;
+      margin-top: 30px;
       cursor: pointer;
+      width: max-content;
+      transition: margin-top 400ms ease, opacity 400ms ease;
+
+      button {
+        background: transparent;
+        padding: 3px;
+        border-style: none;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        margin: 2px;
+        font-size: inherit;
+        color: inherit;
+        cursor: pointer;
+      }
 
       &:hover,
       &:active {
-        background: ${colors.accentLight};
-        color: ${colors.main};
+        color: ${colors.background};
+        border: 2px solid ${colors.accent};
+        button {
+          background: ${colors.accent};
+        }
       }
+    }
+
+    li:first-child {
+      margin-top: ${({ l1 }) => (l1 ? 30 : -30)}px;
+      opacity: ${({ l1 }) => (l1 ? 100 : 0)};
+      transition-delay: 400ms, 500ms;
+    }
+    li:nth-child(2) {
+      margin-top: ${({ l2 }) => (l2 ? 30 : -30)}px;
+      opacity: ${({ l2 }) => (l2 ? 100 : 0)};
+      transition-delay: 550ms, 650ms;
+    }
+    li:last-child {
+      margin-top: ${({ l3 }) => (l3 ? 30 : -30)}px;
+      opacity: ${({ l3 }) => (l3 ? 100 : 0)};
+      transition-delay: 700ms, 800ms;
     }
   }
 
@@ -68,21 +99,16 @@ const StyledIntro = styled.section`
       }
 
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         padding-right: 60px;
       }
     }
 
     ul {
-      display: flex;
-      justify-content: space-around;
-      margin: 0;
-      margin-bottom: 10px;
-      padding: 0;
-      // max-width: 80%;
+      padding-left: 35px;
 
       li {
-        margin: 0;
+        font-size: 2rem;
       }
     }
   }
@@ -97,21 +123,43 @@ function Intro() {
   const [refH2, inViewH2] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-    delay: 1000,
   });
 
+  const [ulRef, ulInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+    delay: 500,
+  });
+
+  const [li1Ref, l1View] = useInView();
+  const [li2Ref, l2View] = useInView();
+  const [li3Ref, l3View] = useInView();
+
   return (
-    <StyledIntro inViewH1={inViewH1} inViewH2={inViewH2}>
+    <StyledIntro
+      inViewH1={inViewH1}
+      inViewH2={inViewH2}
+      ulInView={ulInView}
+      l1={l1View}
+      l2={l2View}
+      l3={l3View}
+    >
       <div className="intro-txt">
         <h1 ref={refH1}>Hello.</h1>
         <h2 ref={refH2}>
           My name is Nick. I am a full-stack, self-taught web developer.
         </h2>
       </div>
-      <ul>
-        <li>Projects</li>
-        <li>Contact</li>
-        <li>About</li>
+      <ul ref={ulRef}>
+        <li ref={li1Ref}>
+          <button>Projects</button>
+        </li>
+        <li ref={li2Ref}>
+          <button>Contact</button>
+        </li>
+        <li ref={li3Ref}>
+          <button>About</button>
+        </li>
       </ul>
     </StyledIntro>
   );
