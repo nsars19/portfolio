@@ -149,6 +149,7 @@ function Intro() {
 
   return (
     <StyledIntro
+      name="intro"
       inViewH1={inViewH1}
       inViewH2={inViewH2}
       ulInView={ulInView}
