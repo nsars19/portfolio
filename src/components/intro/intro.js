@@ -49,7 +49,7 @@ const StyledIntro = styled.section`
       margin-top: 30px;
       cursor: pointer;
       width: max-content;
-      transition: margin-top 400ms ease, opacity 400ms ease;
+      transition: margin-left 400ms ease, opacity 400ms ease;
 
       button {
         background: transparent;
@@ -74,19 +74,19 @@ const StyledIntro = styled.section`
     }
 
     li:first-child {
-      margin-top: ${({ l1 }) => (l1 ? 30 : -30)}px;
+      margin-left: ${({ l1 }) => (l1 ? 0 : -100)}px;
       opacity: ${({ l1 }) => (l1 ? 100 : 0)};
-      transition-delay: 400ms, 500ms;
+      transition-delay: 300ms;
     }
     li:nth-child(2) {
-      margin-top: ${({ l2 }) => (l2 ? 30 : -30)}px;
+      margin-left: ${({ l2 }) => (l2 ? 0 : -100)}px;
       opacity: ${({ l2 }) => (l2 ? 100 : 0)};
-      transition-delay: 550ms, 650ms;
+      transition-delay: 400ms;
     }
     li:last-child {
-      margin-top: ${({ l3 }) => (l3 ? 30 : -30)}px;
+      margin-left: ${({ l3 }) => (l3 ? 0 : -100)}px;
       opacity: ${({ l3 }) => (l3 ? 100 : 0)};
-      transition-delay: 700ms, 800ms;
+      transition-delay: 500ms;
     }
   }
 
