@@ -162,7 +162,7 @@ function Intro() {
           <div className="dot">.</div>
         </h1>
         <h2 ref={refH2}>
-          My name is Nick. I am a full-stack, self-taught web developer.
+          My name is Nick. I am a self-taught full-stack web developer.
         </h2>
       </div>
       <ul ref={ulRef}>
