@@ -14,7 +14,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${colors.background}
+    font-family: 'Open Sans', sans-serif;
+    background: ${colors.background};
   }
 `;
 
