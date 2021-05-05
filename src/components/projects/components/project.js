@@ -54,6 +54,10 @@ const StyledProject = styled.div`
     align-items: center;
   }
 
+  .tag-wrap {
+    text-align: center;
+  }
+
   .tag-wrap li {
     display: inline-block;
     list-style: none;
