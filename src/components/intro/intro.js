@@ -15,12 +15,13 @@ const StyledIntro = styled.section`
 
     h1 {
       font-size: 5rem;
-      opacity: ${({ inViewH1 }) => (inViewH1 ? 100 : 0)};
+      color: ${({ inViewH1 }) => (inViewH1 ? colors.text : "transparent")};
       margin-top: ${({ inViewH1 }) => (inViewH1 ? 0 : 20)}px;
 
       .dot {
         display: inline;
         color: ${colors.accent};
+        color: ${({ inViewH1 }) => (inViewH1 ? colors.accent : "transparent")};
       }
     }
 
@@ -29,13 +30,14 @@ const StyledIntro = styled.section`
       padding-left: 5px;
       margin-top: 20px;
       max-width: 360px;
-      opacity: ${({ inViewH2 }) => (inViewH2 ? 100 : 0)};
+      color: ${({ inViewH2 }) => (inViewH2 ? colors.text : "transparent")};
       margin-top: ${({ inViewH2 }) => (inViewH2 ? 20 : 40)}px;
     }
 
     h1,
-    h2 {
-      transition: opacity 400ms ease, margin-top 400ms ease;
+    h2,
+    .dot {
+      transition: color 800ms ease, margin-top 400ms ease;
     }
   }
 
@@ -43,7 +45,7 @@ const StyledIntro = styled.section`
     height: 100%;
     padding-top: 20px;
     padding-left: 75px;
-    opacity: ${({ ulInView }) => (ulInView ? 100 : 0)};
+    // opacity: ${({ ulInView }) => (ulInView ? 100 : 0)};
     transition: opacity 1000ms ease 400ms;
 
     li {
@@ -54,7 +56,7 @@ const StyledIntro = styled.section`
       margin-top: 30px;
       cursor: pointer;
       width: max-content;
-      transition: margin-left 400ms ease, opacity 400ms ease;
+      transition: margin-left 400ms ease, color 800ms ease;
 
       button {
         background: transparent;
@@ -73,6 +75,7 @@ const StyledIntro = styled.section`
         color: ${colors.background};
         border: 2px solid ${colors.accent};
         button {
+          color: ${colors.background};
           background: ${colors.accent};
         }
       }
@@ -80,17 +83,17 @@ const StyledIntro = styled.section`
 
     li:first-child {
       margin-left: ${({ l1 }) => (l1 ? 0 : -100)}px;
-      opacity: ${({ l1 }) => (l1 ? 100 : 0)};
+      color: ${({ l1 }) => (l1 ? colors.text : "transparent")};
       transition-delay: 300ms;
     }
     li:nth-child(2) {
       margin-left: ${({ l2 }) => (l2 ? 0 : -100)}px;
-      opacity: ${({ l2 }) => (l2 ? 100 : 0)};
+      color: ${({ l2 }) => (l2 ? colors.text : "transparent")};
       transition-delay: 400ms;
     }
     li:last-child {
       margin-left: ${({ l3 }) => (l3 ? 0 : -100)}px;
-      opacity: ${({ l3 }) => (l3 ? 100 : 0)};
+      color: ${({ l3 }) => (l3 ? colors.text : "transparent")};
       transition-delay: 500ms;
     }
   }
