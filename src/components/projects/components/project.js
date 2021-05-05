@@ -88,13 +88,13 @@ const StyledProject = styled.div`
   }
 `;
 
-export default function Project({ project }) {
+export default function Project({ project, setImg, setVis }) {
   const { title, src, desc, tags, code, live } = project;
 
   return (
     <StyledProject className="proj-item">
       <div className="img-wrap">
-        <Image src={src} alt={"Facespace"} />
+        <Image src={src} alt={"Facespace"} setImg={setImg} setVis={setVis} />
       </div>
       <div className="content-right">
         <div className="content-top">

@@ -9,9 +9,10 @@ const StyledImage = styled.div`
     box-shadow: 0 0 0.4px #0001, 0 0 0.8px #0001, 0 0 1.5px #0001,
       0 0 2.5px #0002, 0 0 3.4px #0002, 0 0 5.6px #0003;
 
-    &:hover {
+    &:hover,
+    &:active {
       cursor: pointer;
-      transform: translateY(-1px);
+      transform: translateY(0px);
       transition: transform 200ms ease, box-shadow 200ms ease;
       box-shadow: 0 0 0.4px #0001, 0 0 0.8px #0001, 0 0 1.5px #0001,
         0 2px 2.5px #0002, 0 4px 3.4px #0002, 0 4px 5.6px #0003,
@@ -26,9 +27,14 @@ const StyledImage = styled.div`
   }
 `;
 
-export default function Image({ src, alt }) {
+export default function Image({ src, alt, setImg, setVis }) {
+  const setImage = () => {
+    setImg({ src, alt });
+    setVis(true);
+  };
+
   return (
-    <StyledImage>
+    <StyledImage onClick={setImage}>
       <img src={src} alt={alt || "Description"} />
     </StyledImage>
   );

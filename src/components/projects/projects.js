@@ -3,6 +3,8 @@ import ScrollToTop from "./../scrollToTop/scrollToTop";
 import { detail } from "./projDetail";
 import Project from "./components/project";
 import uniqid from "uniqid";
+import { useState } from "react";
+import ImageModal from "./components/imageModal";
 
 const StyledProjects = styled.div`
   position: relative;
@@ -18,16 +20,22 @@ const StyledProjects = styled.div`
 `;
 
 export default function Projects() {
+  const [modalVis, setModalVis] = useState(false);
+  const [img, setImg] = useState(null);
+
   return (
-    <StyledProjects name="projects">
-      <ul className="proj-wrap">
-        {detail.map((project) => (
-          <li key={uniqid()} className="proj">
-            <Project project={project} />
-          </li>
-        ))}
-      </ul>
-      <ScrollToTop />
-    </StyledProjects>
+    <>
+      <StyledProjects name="projects">
+        <ul className="proj-wrap">
+          {detail.map((project) => (
+            <li key={uniqid()} className="proj">
+              <Project project={project} setImg={setImg} setVis={setModalVis} />
+            </li>
+          ))}
+        </ul>
+        <ScrollToTop />
+      </StyledProjects>
+      <ImageModal img={img} vis={modalVis} setVis={setModalVis} />
+    </>
   );
 }
