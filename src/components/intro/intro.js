@@ -143,7 +143,8 @@ function Intro() {
   const [li3Ref, l3View] = useInView(liOpts);
 
   const scrollOptions = { smooth: "easeOutCubic" };
-  const scrollToProjects = () => scroller.scrollTo("projects", scrollOptions);
+  const scrollToProjects = () =>
+    scroller.scrollTo("projects", { ...scrollOptions, offset: -20 });
   const scrollToContact = () => scroller.scrollTo("contact", scrollOptions);
   const scrollToAbout = () => scroller.scrollTo("about", scrollOptions);
 
