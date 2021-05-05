@@ -4,6 +4,9 @@ import knight from "./assets/knight.png";
 import bst from "./assets/bst.png";
 import chess from "./assets/chess.png";
 import waldo from "./assets/waldo.png";
+import todo from "./assets/todo.png";
+import list from "./assets/list.png";
+import battleship from "./assets/battleship.png";
 
 export const detail = [
   {
@@ -46,11 +49,36 @@ export const detail = [
     code: "https://github.com/nsars19/Chess",
   },
   {
+    title: "Linked List",
+    src: list,
+    desc: "description",
+    tags: ["ruby", "data structures"],
+    code: "https://github.com/nsars19/linked_list",
+  },
+  {
+    title: "Todoer",
+    src: todo,
+    tags: ["vanillaJS", "javascript", "webpack", "local storage"],
+    desc:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+    code: "https://github.com/nsars19/todo-list",
+    live: "https://nsars19.github.io/todo-list/",
+  },
+  {
     title: "Image Tagger",
     src: waldo,
     desc: "description",
     tags: ["react", "rails", "heroku", "sql"],
     code: "https://github.com/nsars19/Image-Tagger",
     live: "https://nsars19.github.io/Image-Tagger/",
+  },
+  {
+    title: "Battleship",
+    src: battleship,
+    desc:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+    tags: ["react", "oop"],
+    code: "https://github.com/nsars19/Battleship",
+    live: "https://nsars19.github.io/Battleship/",
   },
 ];
