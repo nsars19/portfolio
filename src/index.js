@@ -22,6 +22,12 @@ const GlobalStyles = createGlobalStyle`
       font-size: 18px;
     }
   }
+
+  @media (max-width: 540px) {
+    body p {
+      font-size: 16px;
+    }
+  }
 `;
 
 ReactDOM.render(
