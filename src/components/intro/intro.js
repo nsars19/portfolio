@@ -174,11 +174,11 @@ function Intro() {
         <li ref={li1Ref}>
           <button onClick={scrollToProjects}>Projects</button>
         </li>
-        <li ref={li2Ref}>
-          <button onClick={scrollToContact}>Contact</button>
-        </li>
         <li ref={li3Ref}>
           <button onClick={scrollToAbout}>About</button>
+        </li>
+        <li ref={li2Ref}>
+          <button onClick={scrollToContact}>Contact</button>
         </li>
       </ul>
     </StyledIntro>
