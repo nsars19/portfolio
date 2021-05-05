@@ -21,7 +21,8 @@ const StyledLink = styled.div`
     display: inline-block;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     a {
       background: ${colors.accent};
     }
