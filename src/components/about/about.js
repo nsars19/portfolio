@@ -39,7 +39,7 @@ export default function About() {
           Building websites and applications is something that I've come to find
           incredibly fulfilling. The process of watching something be built
           piece by piece, component by component, right up until that final part
-          is attached, is such a rewarding experience. It's no wonder so many
+          is attached is such a rewarding experience. It's no wonder so many
           software engineers take to carpentry and mechanics! I feel very
           fortunate to be able to do work that I find so enjoyable.
         </p>
