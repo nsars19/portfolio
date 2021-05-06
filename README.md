@@ -1,1 +1,1 @@
-My portfolio project build with create-react-app.
+My portfolio project built with create-react-app.
