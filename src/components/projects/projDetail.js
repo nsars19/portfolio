@@ -8,8 +8,17 @@ import todo from "./assets/todo.png";
 import list from "./assets/list.png";
 import battleship from "./assets/battleship.png";
 import unscrambler from "./assets/unscrambler.png";
+import trie from "./assets/trie.gif";
 
 export const detail = [
+  {
+    title: "Search Trie",
+    src: trie,
+    desc: "A search trie implementation created for the user-searching functionality in the Facespace app. It is directly integrated with the react ui to populate search results in real time.",
+    tags: ["node", "react", "data structures", "npm"],
+    code: "https://github.com/nsars19/Trie-Search",
+    live: "https://nsars19.github.io/facebookish",
+  },
   {
     title: "Unscrambler",
     src: unscrambler,
