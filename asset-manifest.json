@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.c060e6c9.chunk.js",
-    "main.js.map": "/static/js/main.c060e6c9.chunk.js.map",
+    "main.js": "/static/js/main.49d56426.chunk.js",
+    "main.js.map": "/static/js/main.49d56426.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b83279d6.js",
     "runtime-main.js.map": "/static/js/runtime-main.b83279d6.js.map",
     "static/js/2.6c2bb00b.chunk.js": "/static/js/2.6c2bb00b.chunk.js",
@@ -12,6 +12,7 @@
     "static/media/battleship.d3457714.png": "/static/media/battleship.d3457714.png",
     "static/media/bst.5052d438.png": "/static/media/bst.5052d438.png",
     "static/media/chess.b152c672.png": "/static/media/chess.b152c672.png",
+    "static/media/compressy.4a5a57ec.png": "/static/media/compressy.4a5a57ec.png",
     "static/media/facespace1.1eddc138.png": "/static/media/facespace1.1eddc138.png",
     "static/media/knight.dd433d4c.png": "/static/media/knight.dd433d4c.png",
     "static/media/list.51d7c3cd.png": "/static/media/list.51d7c3cd.png",
@@ -23,6 +24,6 @@
   "entrypoints": [
     "static/js/runtime-main.b83279d6.js",
     "static/js/2.6c2bb00b.chunk.js",
-    "static/js/main.c060e6c9.chunk.js"
+    "static/js/main.49d56426.chunk.js"
   ]
 }
