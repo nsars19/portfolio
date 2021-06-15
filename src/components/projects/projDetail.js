@@ -9,8 +9,24 @@ import list from "./assets/list.png";
 import battleship from "./assets/battleship.png";
 import unscrambler from "./assets/unscrambler.png";
 import trie from "./assets/trie.gif";
+import compressy from "./assets/compressy.png";
 
 export const detail = [
+  {
+    title: "Compressy",
+    src: compressy,
+    desc: "A user interface for an image compression application built in Express. This project was initially a Node app built to process the hundreds of image assets used in my AT Photos application. The prospect of compressing the images manually via TinyJPG was not appealing to me, so I created tooling to handle the task for me. The server for this project is integrated with this image handling tooling, and sends a zipped file containing all the processed images to the UI.",
+    tags: [
+      "node",
+      "express",
+      "react",
+      "asset handling",
+      "form data",
+      "file uploading",
+    ],
+    code: "https://github.com/nsars19/shrinkifier-ui",
+    live: "https://nsars19.github.io/shrinkifier-ui/",
+  },
   {
     title: "Search Trie",
     src: trie,
