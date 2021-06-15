@@ -98,7 +98,12 @@ export default function Project({ project, setImg, setVis }) {
   return (
     <StyledProject className="proj-item">
       <div className="img-wrap">
-        <Image src={src} alt={"Facespace"} setImg={setImg} setVis={setVis} />
+        <Image
+          src={src}
+          alt="Project screenshot"
+          setImg={setImg}
+          setVis={setVis}
+        />
       </div>
       <div className="content-right">
         <div className="content-top">
